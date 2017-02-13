@@ -22,7 +22,7 @@ function createRoute(url, shortUrl) {
 }
 
 router.get('/', function (req, res) {
-    res.send('Use: placeholder/new/http://link');
+    res.send('Use: https://damp-sierra-41060.herokuapp.com/new/http://link');
 });
 
 router.param('url', function (req, res, next, url) {
@@ -50,7 +50,7 @@ router.get('/new/:url(*)', function (req, res) {
     createRoute(url, shortUrl);
     res.json({
         url: url,
-        shortUrl: shortUrl
+        shortUrl: 'https://damp-sierra-41060.herokuapp.com/' + shortUrl
     });
 });
 
