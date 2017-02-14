@@ -1,4 +1,6 @@
 var express = require('express');
+var path = require('path');
+
 var app = express();
 
 var router = express.Router();
@@ -22,7 +24,8 @@ function createRoute(url, shortUrl) {
 }
 
 router.get('/', function (req, res) {
-    res.send('Use: https://damp-sierra-41060.herokuapp.com/new/http://link');
+    res.sendFile(path.join(__dirname + '/index.html'));
+    // res.send('Use: https://damp-sierra-41060.herokuapp.com/new/http://link');
 });
 
 router.param('url', function (req, res, next, url) {
