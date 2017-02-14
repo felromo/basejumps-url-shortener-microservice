@@ -1,7 +1,7 @@
 # Url Shortener Microservice
 
 ##  About
-Takes in a url, shortens it, then makes it availabel for use.
+Takes in a url, shortens it, then makes it available for use.
 
 ## How to use it
  - Pass a url to https://damp-sierra-41060.herokuapp.com/new/{link-here}
